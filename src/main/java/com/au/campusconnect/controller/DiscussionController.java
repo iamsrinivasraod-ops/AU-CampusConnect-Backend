@@ -18,7 +18,10 @@ import com.au.campusconnect.repository.DiscussionRepository;
 
 @RestController
 @RequestMapping("/api/discussions")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://au-campusconnect-frontend.onrender.com"
+})
 public class DiscussionController {
 
     private final DiscussionRepository discussionRepository;

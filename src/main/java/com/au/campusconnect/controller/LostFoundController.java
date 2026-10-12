@@ -14,7 +14,10 @@ import com.au.campusconnect.repository.LostFoundRepository;
 
 @RestController
 @RequestMapping("/api/lostfound")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://au-campusconnect-frontend.onrender.com"
+})
 public class LostFoundController {
 
     private final LostFoundRepository repository;

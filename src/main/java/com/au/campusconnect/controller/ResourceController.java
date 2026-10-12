@@ -14,7 +14,10 @@ import com.au.campusconnect.repository.ResourceRepository;
 
 @RestController
 @RequestMapping("/api/resources")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://au-campusconnect-frontend.onrender.com"
+})
 public class ResourceController {
 
     private final ResourceRepository repository;
